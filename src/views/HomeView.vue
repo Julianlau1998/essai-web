@@ -110,6 +110,8 @@ export default {
         this.setAdWatched(true)
       },
       setUUID (uuid) {
+        alert('test')
+        alert(uuid)
         this.device_id = uuid
       }
   }
