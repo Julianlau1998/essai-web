@@ -75,7 +75,7 @@ export default {
     window.addEventListener('customCodeEvent', event => {
         this.device_id = '1'
         alert('test')
-        alert(code)
+        alert(event.code)
     });
     this.getAmount()
   },
