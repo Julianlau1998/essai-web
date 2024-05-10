@@ -72,9 +72,9 @@ export default {
     }
   },
   created () {
-    this.getAmount()
     window.addEventListener('customCodeEvent', event => {
         this.device_id = event.code
+        this.getAmount()
     });
   },
   beforeUnmount () {
