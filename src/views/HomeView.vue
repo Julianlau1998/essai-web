@@ -73,7 +73,6 @@ export default {
   },
   created () {
     window.addEventListener('customCodeEvent', event => {
-        const code = event.code;
         alert('test')
         alert(code)
     });
