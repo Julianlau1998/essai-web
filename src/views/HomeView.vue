@@ -72,10 +72,15 @@ export default {
     }
   },
   created () {
+    this.getAmount()
     window.addEventListener('customCodeEvent', event => {
         this.device_id = event.code
     });
-    this.getAmount()
+  },
+  beforeUnmount () {
+    window.removeEventListener('customCodeEvent', event => {
+        this.device_id = event.code
+    })
   },
   methods: {
     ...mapActions(useEssayStore, { generateEssay: 'generateEssay', getAmountGeneratedToday: 'getAmountGeneratedToday', setAdWatched: 'setAdWatched'}),
