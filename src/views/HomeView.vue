@@ -73,7 +73,7 @@ export default {
   },
   created () {
     window.addEventListener('customCodeEvent', event => {
-        this.device_id = '1'
+        this.device_id = event.code
         alert('test')
         alert(code)
     });
